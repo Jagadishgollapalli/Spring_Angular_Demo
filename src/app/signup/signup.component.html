@@ -1,0 +1,53 @@
+<div class="card w-50 mx-auto mt-4">
+    <h4 class="card-header">Sign Up</h4>
+    <div class="card-body">
+      <form [formGroup]="signup">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            placeholder="Enter email"
+            formControlName="email"
+          />
+        </div>
+        <div
+          *ngIf="
+            signup.get('email')?.touched &&
+            signup.get('email')?.hasError('required')
+          "
+        >
+          Email is Required
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            formControlName="password"
+          />
+        </div>
+        <div
+          *ngIf="
+            signup.get('password')?.touched &&
+            signup.get('password')?.hasError('required')
+          "
+        >
+          Email is Required
+        </div>
+        <button
+          type="submit"
+          [disabled]="signup.invalid"
+          class="btn btn-primary mt-2"
+          (click)="show()"
+        >
+          Sign Up
+        </button>
+      </form>
+      <a routerLink="/login">already have account? LOGIN</a>
+    </div>
+  </div>
+  

@@ -1,0 +1,12 @@
+/* Initially, no border color */
+input {
+    border: 1px solid #ced4da; /* Default border color */
+}
+
+/* When the input is touched and invalid */
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+a{
+    text-decoration: none;
+}

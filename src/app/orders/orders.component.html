@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h2>Order List</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Vendor Name</th>
+          <th>Invoice Number</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders"> 
+          <td>{{ order.order_id }}</td>          
+          <td>{{ order.vendor_name }}</td>    
+          <td>{{ order.invoice_number }}</td> 
+          <td>
+            <button (click)="fetchOrderById(order.order_id )" class="btn btn-success">update</button>
+            <button (click)="deleteOrder(order.order_id)" class="btn btn-danger">delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

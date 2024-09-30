@@ -1,0 +1,9 @@
+table thead{
+    text-align: center;
+}
+tr td {
+    text-align: center;
+}
+.btn{
+    margin-right: 5px;
+}
